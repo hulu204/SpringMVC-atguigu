@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thyleamf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/employee/}" method="post">
+  <input type="hidden" name="id">
+  LastName:<input type="text" name="lastName"><br>
+  Email:<input type="text" name="email"><br>
+  Gender<input type="text" name="gender"><br>
+  <input type="submit" value="添加">
+</form>
+</body>
+</html>
