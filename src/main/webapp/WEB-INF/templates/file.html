@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thyleamf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文件下载</title>
+</head>
+<body>
+  <a th:href="@{/fileDown}">下载文件</a>
+ <form th:action="@{/fileUp}" method="post" enctype="multipart/form-data">
+     头像：<input type="file" name="photo"><br>
+     <input type="submit" value="上传">
+ </form>
+</body>
+</html>
