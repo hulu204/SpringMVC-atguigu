@@ -37,7 +37,26 @@ public class FileController {
         is.close();
         return responseEntity;
     }
-
+//    该方法本地测试时文件上传到了D:\apache-tomcat-8.0.50\webapps\SpringMVC中，每次本地重启服务时上传的图片会消失
+//    @RequestMapping("/fileUp")
+//    public String testUp(MultipartFile photo, HttpSession session) throws IOException {
+//        //获取上传的文件的文件名
+//        String fileName = photo.getOriginalFilename();
+//        //处理文件重名问题
+//        String hzName = fileName.substring(fileName.lastIndexOf("."));
+//        fileName = UUID.randomUUID().toString() + hzName;
+//        //获取服务器中photo目录的路径
+//        ServletContext servletContext = session.getServletContext();
+//        String photoPath = servletContext.getRealPath("photo");
+//        File file = new File(photoPath);
+//        if(!file.exists()){
+//            file.mkdir();
+//        }
+//        String finalPath = photoPath + File.separator + fileName;
+//        //实现上传功能
+//        photo.transferTo(new File(finalPath));
+//        return "success";
+//    }
     @RequestMapping("/fileUp")
     public String testUp(MultipartFile photo) throws IOException {
         String filename = photo.getOriginalFilename();
